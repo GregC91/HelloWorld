@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<form>
+    <!-- Text box created for user input -->
+<input type="text" id ="input1"/>
+</form>
+    
+<div><button id ="button1">Button</button></div>
+<!-- Created a button with an id to respond to an event -->
+
+<!-- div with id demo to write back the user input -->    
+<div id="demo"></div>
+
+<script>
+       
+var event1 = document.getElementById("button1");
+    //  Add an event listener which invokes the first function when the webpage loads - the window object has a method called add eventlistener method which accepts three arguement.  Argument 1 is the event it is listening for.  Argument 2 is the function it is invoking.  Argument 3 is a boolean which is generally set to false
+event1.addEventListener('click',myfirst,false)   
+function myfirst(){
+// Storing a users input into a local variable called user input1 
+var userinput1 = document.getElementById("input1").value;
+    
+//writing the local variable back to the HTML DOM where element has an id of demo    
+document.getElementById("demo").innerHTML = userinput1;
+}
+</script>      
+
+
+</body>
+
+</html>
